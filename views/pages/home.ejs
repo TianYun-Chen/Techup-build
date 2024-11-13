@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- Navbar which can be reused across other pages -->
+        <%- include('../partials/navbar'); %>
+
+
+            <!-- Filter Section -->
+            <section id="filters">
+                <h2>Find Videos</h2>
+
+                <form method="get">
+                    <!-- Skill Level Filter -->
+                    <fieldset>
+                        <label for="level">Skill Level:</label>
+                        <select id="level" name="level">
+                            <% for (const key in options.level) { %>
+                            <option value="<%= key %>" <%= params.level === key ? 'selected' : '' %>><%= options.level[key] %></option>
+                            <% } %>
+                        </select>
+                    </fieldset>
+
+                    <!-- Duration Filter -->
+                    <fieldset>
+                        <label for="duration">Duration:</label>
+                        <select id="duration" name="duration">
+                            <% for (const key in options.duration) { %>
+                            <option value="<%= key %>" <%= params.duration === key ? 'selected' : '' %>><%= options.duration[key] %></option>
+                            <% } %>
+                        </select>
+                    </fieldset>
+
+                    <!-- Target Area Filter -->
+                    <fieldset>
+                        <label for="targetArea">Target Area:</label>
+                        <select id="targetArea" name="targetArea">
+                            <% for (const key in options.targetArea) { %>
+                            <option value="<%= key %>" <%= params.targetArea === key ? 'selected' : '' %>><%= options.targetArea[key] %></option>
+                            <% } %>
+                        </select>
+                    </fieldset>
+
+                    <!-- Search Button -->
+                    <input type="submit" value="Search Videos" />
+                </form>
+            </section>
+
+            <!-- Show blog posts -->
+            <% blogs.forEach(post=> { %>
+                <article class="post-container">
+                    <h3>
+                        <%= post.title %>
+                    </h3>
+                    <p>
+                        <%= post.content %>
+                    </p>
+                    <div>
+                        <iframe width="560" height="315" src="<%= post.url %>" title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <!-- <form action="/delete/<%= post.id %>" method="post"
+                        onsubmit="return confirm('Do you really want to delete this post?');">
+                        <button class="outline primary" type="submit">Delete</button>
+                    </form> -->
+                </article>
+                <% }); %>
+    </main>
+</body>
+
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Find Your Flow Pilates Platform. All rights reserved.</p>
+</footer>
+
+</html>
