@@ -99,8 +99,6 @@ app.get('/', async function (req, res) {
           id: 'desc'
         }
       ]
-      distinct: ['url'] // This ensures that only unique URLs are returned
-});
     });
 
     // Render the homepage with all the blog posts
