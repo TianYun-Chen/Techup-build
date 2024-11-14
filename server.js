@@ -56,6 +56,7 @@ const levelOptions = {
   '': 'All',
   "1": "Beginner Level 1",
   "2": "Beginner Level 2",
+  "3": "Intermediate",
 }
 
 var options = {
