@@ -99,7 +99,9 @@ app.get('/', async function (req, res) {
           id: 'desc'
         }
       ]
-    });
+    }).filter((item, index, self) => 
+      index === self.findIndex((obj) => obj.url === item.url)
+    );
 
     // Render the homepage with all the blog posts
     await res.render('pages/home', {
