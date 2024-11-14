@@ -92,7 +92,7 @@ app.get('/', async function (req, res) {
       where['targetArea'] = targetArea;
     }
     // Get all blog posts
-    const blogs = await (prisma.post.findMany({
+    const blogs = (await prisma.post.findMany({
       where,
       orderBy: [
         {
