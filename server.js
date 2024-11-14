@@ -59,6 +59,14 @@ const levelOptions = {
   "3": "Intermediate",
 }
 
+// Simulating a filter selection change
+const selectedLevel = ''; // "" for 'All', "1", "2", "3" for specific levels
+const filteredVideos = getFilteredVideos(selectedLevel);
+
+// Display the filtered videos
+console.log(filteredVideos);
+
+
 var options = {
   'targetArea': targetAreaOptions,
   'duration': durationOptions,
