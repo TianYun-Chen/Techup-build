@@ -59,13 +59,6 @@ const levelOptions = {
   "3": "Intermediate",
 }
 
-// Simulating a filter selection change
-const selectedLevel = ''; // "" for 'All', "1", "2", "3" for specific levels
-const filteredVideos = getFilteredVideos(selectedLevel);
-
-// Display the filtered videos
-console.log(filteredVideos);
-
 
 var options = {
   'targetArea': targetAreaOptions,
@@ -106,7 +99,9 @@ app.get('/', async function (req, res) {
           id: 'desc'
         }
       ]
-    });
+    }).filter((item, index, self) => 
+      index === self.findIndex((obj) => obj.url === item.url)
+    );
 
     // Render the homepage with all the blog posts
     await res.render('pages/home', {
