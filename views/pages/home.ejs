@@ -58,12 +58,7 @@
             <!-- Show blog posts -->
             <% blogs.forEach(post=> { %>
                 <article class="post-container">
-                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600; color: #0b6b94; margin-bottom: 8px;">
-                        <%= post.title %>
-                    </h3>
-                    <p style="font-family: 'Lora', serif; font-size: 20px; color: #555; line-height: 1.6; margin-bottom: 4px;">
-                        <%= post.content %>
-                    </p>
+                   
                     <div>
                         <iframe 
             src="<%= post.url %>" 
@@ -74,6 +69,13 @@
             allowfullscreen>
         </iframe>
                     </div>
+                    <h3 style="font-family: 'Poppins', sans-serif; font-size: 28px; font-weight: 600; color: #0b6b94; margin-top: 12px; margin-bottom: 8px;">
+                        <%= post.title %>
+                    </h3>
+                    <p style="font-family: 'Lora', serif; font-size: 20px; color: #555; line-height: 1.6; margin-bottom: 4px;">
+                        <%= post.content %>
+                    </p>
+
                     <!-- <form action="/delete/<%= post.id %>" method="post"
                         onsubmit="return confirm('Do you really want to delete this post?');">
                         <button class="outline primary" type="submit">Delete</button>
