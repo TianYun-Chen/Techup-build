@@ -2,12 +2,9 @@
 /* Inner content area */
 main.container {
     background-color: white;
-    padding: 40px; /* Space inside the content */
+    padding: 20px; /* Space inside the content */
     border-radius: 20px; /* Rounded edges */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    margin-left: auto; /* Center container horizontally */
-    margin-right: auto; /* Center container horizontally */
-    max-width: 100%; /* Ensure it takes up full width */
 }
 
 .welcome-container {
