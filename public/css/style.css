@@ -13,12 +13,15 @@
 }
 
 .post-container {
-    max-width: 800px;
+    max-width: 750px;
 
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 20px; /* Rounded edges */
+    padding: 20px; /* Space inside the container */
+    box-shadow: 0 4px 6px rgba(16, 45, 32, 0.1);
 }
 
 .about-container {
