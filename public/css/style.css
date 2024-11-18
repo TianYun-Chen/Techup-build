@@ -1,16 +1,13 @@
-.background-wrapper {
-    background-color: #fb940f; /*姜黄色 */
-    padding: 5px; /* Creates space for the姜黄色 border */
-    min-height: 100vh; /* Ensure it spans the full height of the screen */
-    box-sizing: border-box; /* Includes padding in total dimensions */
-}
 
 /* Inner content area */
 main.container {
-    background-color: #f5f8f8; /* Light beige for content background */
-    padding: 20px; /* Space inside the content */
+    background-color: white;
+    padding: 40px; /* Space inside the content */
     border-radius: 20px; /* Rounded edges */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    margin-left: auto; /* Center container horizontally */
+    margin-right: auto; /* Center container horizontally */
+    max-width: 100%; /* Ensure it takes up full width */
 }
 
 .welcome-container {
@@ -29,7 +26,6 @@ main.container {
 
 .post-container {
     max-width: 750px;
-
     margin-top: 35px;
     margin-bottom: 35px;
     margin-left: auto;

@@ -10,7 +10,6 @@
 </head>
 
 <body>
-    <div class="background-wrapper"></div>
     <main class="container">
         <!-- Navbar which can be reused across other pages -->
         <%- include('../partials/navbar'); %>
@@ -69,7 +68,7 @@
                         <iframe 
             src="<%= post.url %>" 
             title="YouTube video player"
-            style="display: block; width: 80%; height: auto; border: none; aspect-ratio: 16/9; margin: 0 auto" 
+            style="display: block; width: 100%; height: auto; border: none; aspect-ratio: 16/9; margin: 0 auto" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
@@ -89,5 +88,4 @@
 <footer>
     <p>&copy; 2024 Find Your Flow Pilates Platform. All rights reserved.</p>
 </footer>
-
 </html>
