@@ -1,7 +1,7 @@
 .logo {
     display: flex; /* Aligns icon and text horizontally */
     align-items: center; /* Vertically centers the icon with the text */
-    font-size: 24px; /* Adjusts text size */
+    font-size: 33px; /* Adjusts text size */
     font-weight: bold; /* Ensures bold text */
     font-family: 'Square Peg', cursive;
     color: #ed6b1b; /* Text color */
@@ -10,8 +10,8 @@
   }
   
   .logo-icon {
-    width: 40px; /* Adjust size of icon */
-    height: 40px;
+    width: 55px; /* Adjust size of icon */
+    height: 55px;
     margin-right: 10px; /* Space between icon and text */
     border-radius: 50%; /* Optional: Makes the icon circular */
   }  
