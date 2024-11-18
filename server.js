@@ -23,6 +23,7 @@ const targetAreaOptions = {
   '': 'All',
   "full-body": "Full Body",
   "stretch": "Stretch",
+  "core": "Core",
 };
 
 const durationOptions = {
