@@ -16,6 +16,12 @@
     border-radius: 50%; /* Optional: Makes the icon circular */
   }  
 
+  .navbar-separator {
+    border: none;  /* Remove default borders */
+    border-top: 1px solid rgba(210, 210, 210, 0.3);  /* Very light gray, almost invisible */
+    margin: 20px 0;  /* Add spacing above and below the line */
+}
+
 /* Inner content area */
 main.container {
     background-color: white;
