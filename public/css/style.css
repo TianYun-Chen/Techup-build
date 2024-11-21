@@ -1,25 +1,72 @@
+/* Global Font Settings */
+body, .navbar a, .custom-btn {
+    font-family: 'Libre Baskerville', serif;
+}
+
+/* Logo & Button Specific Font */
+.logo, .custom-btn {
+    font-family: 'Square Peg', cursive; /* Keep for distinct logo & buttons */
+}
+
+/* Unified Button & Link Color */
+.custom-btn, .home-link, .upload-link, .about-link {
+    color: #fff; /* Keep the text white for consistency */
+}
+
+.home-link:hover, .upload-link:hover, .about-link:hover {
+    color: #ed6b1b; /* Highlight with your primary color on hover */
+}
+
+/* Button Hover */
+.custom-btn:hover {
+    background-color: #C52F21; /* Use a darker version of the primary color */
+}
+
+.custom-btn:active {
+    background-color: #052c65; /* Even darker blue for active state */
+    transform: scale(0.98); /* Slight press effect */
+}
+
+/* General Spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Prevents overflow issues */
+}
+
 .logo {
     display: flex; /* Aligns icon and text horizontally */
     align-items: center; /* Vertically centers the icon with the text */
     font-size: 33px; /* Adjusts text size */
     font-weight: bold; /* Ensures bold text */
-    font-family: 'Square Peg', cursive;
-    color: #ed6b1b; /* Text color */
-    text-transform: uppercase; /* Optional: Converts text to uppercase */
+    font-family: 'Square Peg', cursive; /* Classy, cursive font */
+    color: #ed6b1b; /* Vibrant orange-red text color */
+    text-transform: uppercase; /* Converts text to uppercase */
     letter-spacing: 2px; /* Adds letter spacing */
-  }
-  
-  .logo-icon {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth hover effects */
+}
+
+.logo:hover {
+    color: #d15514; /* Slightly darker shade for hover effect */
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.logo-icon {
     width: 55px; /* Adjust size of icon */
     height: 55px;
     margin-right: 10px; /* Space between icon and text */
-    border-radius: 50%; /* Optional: Makes the icon circular */
-  }  
+    border-radius: 50%; /* Makes the icon circular */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
 
-  .navbar-separator {
-    border: none;  /* Remove default borders */
-    border-top: 1px solid rgba(210, 210, 210, 0.3);  /* Very light gray, almost invisible */
-    margin: 20px 0;  /* Add spacing above and below the line */
+.logo-icon:hover {
+    transform: rotate(15deg) scale(1.1); /* Fun rotation and zoom effect */
+}
+
+.navbar-separator {
+    border: none; /* Remove default borders */
+    border-top: 1px solid rgba(210, 210, 210, 0.3); /* Very light gray, almost invisible */
+    margin: 20px 0; /* Add spacing above and below the line */
 }
 
 /* Inner content area */
@@ -28,63 +75,40 @@ body {
     background-repeat: repeat;
     background-size: auto;
     background-position: top left;
-} 
+}
 
 main.container {
-    background-color: rgba(255, 250, 250,1);
+    background-color: rgba(255, 250, 250, 1); /* Light cream background */
     padding: 20px; /* Space inside the content */
     border-radius: 20px; /* Rounded edges */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-} 
-
-.welcome-container {
-    text-align: center;
-
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
-.new-post-btn-container{
-    text-align: center;
-
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.post-container {
-    max-width: 700px;
-    margin-top: 35px;
-    margin-bottom: 35px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px; /* Rounded edges */
-    padding: 20px; /* Space inside the container */
-    box-shadow: 0 4px 6px rgba(16, 45, 32, 0.1);
-}
-
-
+.welcome-container,
+.new-post-btn-container,
 .about-container {
     text-align: center;
-
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.about-container > img{
+.about-container > img {
     margin-bottom: 30px;
+    border-radius: 10px; /* Slight rounding for a polished look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for better focus */
 }
-
 
 .cancel-create-post {
     text-align: center;
 }
 
+/* Unified Button */
 .custom-btn {
     font-family: 'Square Peg', cursive;
     font-size: 24px;
     color: white; /* Text color */
-    background-color: #0d6efd; /* Bootstrap's primary blue */
-    padding: 10px 20px;
+    background-color: #3A6B6D; /* Teal background for buttons */
+    padding: 12px 24px; /* Adjusted padding */
     border: none;
     border-radius: 5px;
     text-decoration: none; /* Remove underline */
@@ -96,6 +120,7 @@ main.container {
 .custom-btn:hover {
     background-color: #084298; /* Darker blue for hover effect */
     transform: scale(1.05); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slight shadow for hover */
 }
 
 .custom-btn:active {
@@ -103,31 +128,90 @@ main.container {
     transform: scale(0.98); /* Slight press effect */
 }
 
-.home-link {
-    color: #2A3439; /* Orange color for Home */
+
+/* Input Styles for Forms */
+input[type="submit"] {
+    background-color: #3A6B6D;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.upload-link {
-    color: #2A3439; /* Red color for Upload */
+input[type="submit"]:hover {
+    background-color: #A5241D;
 }
 
+.home-link,
+.upload-link,
 .about-link {
-    color: #2A3439; /* Green color for About */
+    color: #2A3439; /* Neutral gray for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
 }
 
-/* Optional: Change color on hover */
 .home-link:hover,
 .upload-link:hover,
 .about-link:hover {
-    color: #333; /* Dark color for hover effect */
+    color: #ED6B1B; /* Vibrant orange-red on hover */
+    text-decoration: underline; /* Adds underline for emphasis */
 }
 
-/* Override the default styling from PicoCSS */
-#filters .filter-select {
-    font-size: 14px !important; /* Smaller text */
-    padding: 5px 10px !important; /* Less padding for compact appearance */
-    width: auto !important; /* Adjust width to fit the content */
-    border-radius: 5px !important; /* Slightly rounded corners */
-    border: 1px solid #ccc !important; /* Subtle border */
-    background-color: #f9f9f9 !important; /* Light background */
+/* Additional improvements */
+.post-container {
+    max-width: 700px;
+    margin: 35px auto; /* Center the container */
+    border-radius: 20px; /* Rounded edges */
+    padding: 20px; /* Space inside the container */
+    background-color: #fff; /* White background for contrast */
+    box-shadow: 0 4px 6px rgba(16, 45, 32, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-container:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(16, 45, 32, 0.2); /* Enhanced shadow on hover */
+}
+/* Filter Section */
+.filter-heading {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 26px;
+    color: #3A6B6D; /* Muted teal */
+    text-align: center;
+    margin: 25px 0 20px;
+}
+
+.filter-fieldset label {
+    font-size: 16px;
+    color: #3A6B6D;
+}
+
+.filter-fieldset select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Footer */
+.site-footer {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    font-size: 12px;
+    text-align: justify;
+}
+
+/* Button Styles */
+.button.primary {
+    background-color: #ed6b1b; /* Vibrant orange-red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button.primary:hover {
+    background-color: #c55616; /* Slightly darker shade */
 }
