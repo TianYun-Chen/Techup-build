@@ -23,12 +23,19 @@
 }
 
 /* Inner content area */
+body {
+    background-image: url('/images/background.jpg'); /* Ensure this is correct */
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+} 
+
 main.container {
-    background-color: white;
+    background-color: rgba(255, 250, 250,1);
     padding: 20px; /* Space inside the content */
     border-radius: 20px; /* Rounded edges */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
+} 
 
 .welcome-container {
     text-align: center;
@@ -55,6 +62,7 @@ main.container {
     box-shadow: 0 4px 6px rgba(16, 45, 32, 0.1);
 }
 
+
 .about-container {
     text-align: center;
 
@@ -69,4 +77,57 @@ main.container {
 
 .cancel-create-post {
     text-align: center;
+}
+
+.custom-btn {
+    font-family: 'Square Peg', cursive;
+    font-size: 24px;
+    color: white; /* Text color */
+    background-color: #0d6efd; /* Bootstrap's primary blue */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-btn:hover {
+    background-color: #084298; /* Darker blue for hover effect */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.custom-btn:active {
+    background-color: #052c65; /* Even darker blue for active state */
+    transform: scale(0.98); /* Slight press effect */
+}
+
+.home-link {
+    color: #2A3439; /* Orange color for Home */
+}
+
+.upload-link {
+    color: #2A3439; /* Red color for Upload */
+}
+
+.about-link {
+    color: #2A3439; /* Green color for About */
+}
+
+/* Optional: Change color on hover */
+.home-link:hover,
+.upload-link:hover,
+.about-link:hover {
+    color: #333; /* Dark color for hover effect */
+}
+
+/* Override the default styling from PicoCSS */
+#filters .filter-select {
+    font-size: 14px !important; /* Smaller text */
+    padding: 5px 10px !important; /* Less padding for compact appearance */
+    width: auto !important; /* Adjust width to fit the content */
+    border-radius: 5px !important; /* Slightly rounded corners */
+    border: 1px solid #ccc !important; /* Subtle border */
+    background-color: #f9f9f9 !important; /* Light background */
 }

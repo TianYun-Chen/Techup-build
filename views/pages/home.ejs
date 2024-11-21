@@ -33,7 +33,7 @@
 
                 <form method="get">
                     <!-- Skill Level Filter -->
-                    <fieldset>
+                    <fieldset class="filter-fieldset">
                         <label for="level">Skill Level:</label>
                         <select id="level" name="level">
                             <% for (const key in options.level) { %>
@@ -80,14 +80,14 @@
             referrerpolicy="strict-origin-when-cross-origin" 
             allowfullscreen>
         </iframe>
-                    </div>
                     <h3 style="font-family: 'Libre Baskerville', serif; font-size: 26px; font-weight: 600; color: #0b6b94; margin-top: 15px; margin-bottom: 8px;">
                         <%= post.title %>
                     </h3>
                   
                     <p style="font-family: 'Roboto', serif; font-size: 20px; color: #555; line-height: 1.6; margin-bottom: 4px; font-style: italic;">
                         <%= post.content %>
-                    </p>
+                    </p>   
+                </div>
 
                     <!-- <form action="/delete/<%= post.id %>" method="post"
                         onsubmit="return confirm('Do you really want to delete this post?');">
