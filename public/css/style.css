@@ -112,7 +112,6 @@ main.container {
     border: none;
     border-radius: 5px;
     text-decoration: none; /* Remove underline */
-    display: inline-block;
     text-align: center;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
